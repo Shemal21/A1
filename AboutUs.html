@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COSSIE-PLAY</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "white";
+		}
+	}
+	
+	function nav_li_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "white";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    <section id="mainpic">
+    <img src="../../CossiePlay/images/we-re-rabbits-1439192-1279x850.jpg" width="1480" height="430">
+    </section>
+        <br><br><br><nav>
+        	<ul>
+                 <li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                 <li><a href="AboutUs.html" id="1" onClick="nav_li_selected(1)">About Us</a></li>
+                 <li><a href="guidelines.html" id="2" onClick="nav_li_selected(2)">Guidelines</a></li>
+                 <li><a href="profile.html" id="3" onClick="nav_li_selected(3)">Profile</a></li>
+                 <li><a href="register.html" id="4" onClick="nav_li_selected(4)">Register</a></li>
+                 <li><a href="ContactUs.html" id="5" onClick="nav_li_selected(5)">Contact Us</a></li>
+        	</ul>
+        </nav>
+        </header>
+        <br><br><h2>About Us</h2>
+        <section id="col1">
+<h2>CossiePlay is a family-run business, operating in Hulkstown since 2012. We create outstanding custom-made costumes. Cosplayers can order any kind of costume - from simple Spiderman or elf costumes right up to costumes including advanced features like armour, animatronics, realistic weaponry and working force fields. 
+Depending on the difficulty, costumes take between 1 and 50 weeks and cost between $10 and $10,000.
+We Buy and Sell second-hand costumes as well. (Prices available) 
+</h2>
+        
+    </section>
+    <footer><h3>Design By SHEMAL JAYAWARDENA - 2017</h3></footer>
+    </div>
+</body>
+</html>

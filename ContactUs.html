@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COSSIE-PLAY</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "white";
+		}
+	}
+	
+	function nav_li_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "white";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+   
+        <nav>
+        	<ul>
+                 <li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                 <li><a href="AboutUs.html" id="1" onClick="nav_li_selected(1)">About Us</a></li>
+                 <li><a href="guidelines.html" id="2" onClick="nav_li_selected(2)">Guidelines</a></li>
+                 <li><a href="profile.html" id="3" onClick="nav_li_selected(3)">Profile</a></li>
+                 <li><a href="register.html" id="4" onClick="nav_li_selected(4)">Register</a></li>
+                 <li><a href="ContactUs.html" id="5" onClick="nav_li_selected(5)">Contact Us</a></li>
+        	</ul>
+        </nav>
+        </header>
+
+<section id="col10">
+<h2>Contact Us</h2>
+
+<h3>We are available anytime you need! Get in touch with us for your queries and we will be happy to help you at any hour!</h3>
+<br><h3>Our Contact details:</h3>
+<h3>
+<ol><b>PHONE:</b>07 4771 1234</ol>
+<ol><i>FAX:</i>07-4771 1235</ol>
+<ol><i>ADDRESS:</i>4 Stanton Avenue, Hulkstwon</ol>
+<ol><i>EMAIL:</i>cossieplay@ gmail.com</ol>
+</h3>
+
+    </section>
+    <br><br>
+    
+    <footer><h3>Design By SHEMAL JAYAWARDENA - 2017</h3></footer>
+    </div>
+</body>
+</html>

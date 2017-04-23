@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ABC School</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray"
+		}
+	}
+	
+	function nav_li_selected(li_id) {
+		for (i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		sessionStorage.li_id = li_id.toString;
+	}
+</script>
+</head>
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    <img src="images/logo.png" alt="Logo">
+    	<h1>ABC SCHOOL</h1>"images/logo.png"
+      </header>
+        <nav>
+        	<ul>
+                 <li><a href="#" C>Home</a></li>
+                 <li><a href="#" id="1" onClick="nav_li_selected(1)">Courses</a></li>
+                 <li><a href="#" id="2" onClick="nav_li_selected(2)">IT News</a></li>
+                 <li><a href="#" id="3" onClick="nav_li_selected(3)">Career</a></li>
+                 <li><a href="about_us.html" id="4" onClick="nav_li_selected(4)">About Us</a></li>
+                 <li><a href="#" id="5" onClick="nav_li_selected(5)">Contact Us</a></li>
+        	</ul>
+        </nav>
+	<h1 id="main_h1">Welcome to ABC School</h1>
+    <section id="col1">
+    	<h2>Col1</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <section id="col2">
+    	<h2>Col2</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <section id="col3">
+    	<h2>Col3</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <footer><h3>Design By 007 - 2017</h3></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COSSIE-PLAY</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "white";
+		}
+	}
+	
+	function nav_li_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "white";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    <section id="mainpic">
+    <img src="../../CossiePlay/images/devils-570861_1280.jpg" width="1480" height="430">
+    </section>
+        <br><br><br><nav>
+        	<ul>
+                 <li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                 <li><a href="AboutUs.html" id="1" onClick="nav_li_selected(1)">About Us</a></li>
+                 <li><a href="guidelines.html" id="2" onClick="nav_li_selected(2)">Guidelines</a></li>
+                 <li><a href="profile.html" id="3" onClick="nav_li_selected(3)">Profile</a></li>
+                 <li><a href="register.html" id="4" onClick="nav_li_selected(4)">Register</a></li>
+                 <li><a href="ContactUs.html" id="5" onClick="nav_li_selected(5)">Contact Us</a></li>
+        	</ul>
+        </nav>
+        </header>
+        <br><br><h2>Come! Be a part of us!</h2>
+        <section id="col1">
+<h2>Register yourself into CossiePlay and become a member to enjoy yourself on a whole new level! <br>Patrons can register to come to a party by emailing us. <br>They should include :-
+<br>•	Contact person name
+<br>•	phone number
+<br>•	How many people are coming
+
+
+</h2>
+        
+    </section>
+    <footer><h3>Design By SHEMAL JAYAWARDENA - 2017</h3></footer>
+    </div>
+</body>
+</html>
